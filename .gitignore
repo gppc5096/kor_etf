@@ -12,6 +12,8 @@
 !*.ini
 !*.png
 !*.jpg
+!*.ico
+!*.icns
 # etc...
 
 # ...even if they are in subdirectories

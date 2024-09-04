@@ -1,0 +1,14 @@
+git add .  실행시 아래 오류가 날 때 해결 방법
+
+"warning: in the working copy of 'main.py', LF will be replaced by CRLF the next time Git touches it"
+
+. Git 설정 변경 (줄바꿈 처리 방법 설정)
+
+1. 줄바꿈 변환을 비활성화 (모든 운영 체제에서 LF를 유지):
+  git config --global core.autocrlf false
+
+2. Windows에서 줄바꿈 변환을 자동으로 처리 (권장):
+  git config --global core.autocrlf true
+
+3. 현재 프로젝트에만 적용하기:
+  git config core.autocrlf true

@@ -32,14 +32,14 @@ class ETFDataViewer(QMainWindow):
         title_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         title_label.setFont(QFont("Arial", 20))
         main_layout.addWidget(title_label)
-        
+
         # 설명 섹션 추가
         description_label = QLabel("이 프로그램은 한국 주식(ETF) 데이터를 실시간으로 조회하고 관리합니다.")
         description_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         description_label.setFont(QFont("Arial", 12))
         description_label.setStyleSheet("color: lightblue;")
         main_layout.addWidget(description_label)
-        
+
         # 빈 공간 섹션 추가
         spacer = QWidget()
         spacer.setFixedHeight(10)  # 10픽셀 높이의 빈 공간
@@ -64,16 +64,18 @@ class ETFDataViewer(QMainWindow):
         input_layout.addWidget(self.url_input)
 
         button_layout = QHBoxLayout()
-        button_colors = ["#FFB3BA", "#BAFFC9", "#BAE1FF", "#FFFFBA"]  # 파스텔 톤 색상
-        
+        button_colors = ["#FFB3BA", "#BAFFC9",
+                         "#BAE1FF", "#FFFFBA"]  # 파스텔 톤 색상
+
         # 버튼 생성
         self.fetch_button = QPushButton("가져오기")
         self.update_button = QPushButton("업데이트")
         self.delete_button = QPushButton("삭제")
         self.clear_button = QPushButton("초기화")
-        
-        buttons = [self.fetch_button, self.update_button, self.delete_button, self.clear_button]
-        
+
+        buttons = [self.fetch_button, self.update_button,
+                   self.delete_button, self.clear_button]
+
         for button, color in zip(buttons, button_colors):
             button.setStyleSheet(f"""
                 QPushButton {{
